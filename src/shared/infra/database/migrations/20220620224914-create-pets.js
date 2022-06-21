@@ -8,6 +8,10 @@ module.exports = {
         defaultValue: Sequelize.UUIDV4,
         primaryKey: true,
       },
+      especie: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
       nome: {
         type: Sequelize.STRING,
         allowNull: false,
