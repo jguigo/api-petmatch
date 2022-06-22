@@ -20,15 +20,38 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
+      senha: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
       contato: {
         type: Sequelize.INTEGER,
         allowNull: false,
       },
-      enderecoID: {
+      cep: {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      senha: {
+      logradouro: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      numero_logradouro: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      complemento: {
+        type: Sequelize.STRING,
+      },
+      bairro: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      cidade: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      uf: {
         type: Sequelize.STRING,
         allowNull: false,
       },
