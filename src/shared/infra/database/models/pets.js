@@ -40,7 +40,7 @@ const Pets = db.define("pets", {
 		allowNull: false
 	},
 	sobre: {
-		type: DataTypes.INTEGER
+		type: DataTypes.STRING
 	},
 	userID: {
 		type: DataTypes.UUID,
