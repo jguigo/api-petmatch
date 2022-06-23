@@ -19,6 +19,27 @@ const UserController = {
             return res.status(500).json("Ocorreu um erro ao listar usuários");
         }
     },
+
+    async findOne(req, res) {
+        try {
+            const id = req.params["id"];
+
+            const user = await Users.findOne({
+                where: {
+                    userStatus: 1,
+                    id: id,
+                },
+                attributes: ["id", "nome", "email", "cidade", "uf"],
+            });
+            if (user) {
+                return res.status(200).json(user);
+            } else {
+                return res.status(404).json("usuario nao encontrado");
+            }
+        } catch (error) {
+            return res.status(500).json("Ocorreu um erro ao listar usuários");
+        }
+    },
 };
 
 module.exports = UserController;
