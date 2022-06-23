@@ -1,9 +1,9 @@
-const { findAllPetUseCase } = require('../useCase/index');
+const { findAllPetUserCase } = require('../useCase/index');
 
 class FindAllPetController {
   async findAll(req, res) {
     try {
-      const result = await findAllPetUseCase.findAll();
+      const result = await findAllPetUserCase.findAll();
 
       return res.status(200).json(result);
 
