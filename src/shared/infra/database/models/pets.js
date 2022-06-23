@@ -44,7 +44,7 @@ const Pets = db.define("pets", {
         type: DataTypes.STRING,
     },
     userID: {
-        type: DataTypes.UUID,
+        type: DataTypes.INTEGER,
         allowNull: false,
     },
     petStatus: {
