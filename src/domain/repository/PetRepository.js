@@ -1,4 +1,3 @@
-const { where } = require("sequelize/types");
 const { Pet } = require("../../shared/infra/database/models/index");
 
 class PetRepository {
