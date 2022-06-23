@@ -3,9 +3,10 @@ const { DataTypes } = require("sequelize");
 
 const Pets = db.define("pets", {
 	id: {
-		type: DataTypes.UUID,
-		defaultValue: DataTypes.UUIDV4,
-		primaryKey: true
+		type: DataTypes.INTEGER,
+		primaryKey: true,
+		allowNull: false,
+		autoIncrement: true
 	},
 	especie: {
 		type: DataTypes.STRING,

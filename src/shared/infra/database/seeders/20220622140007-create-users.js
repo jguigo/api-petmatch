@@ -13,7 +13,7 @@ for (let i = 0; i < 10; i++) {
 		email: faker.internet.email(),
 		cpf: faker.random.numeric(11, { allowLeadingZeros: false }),
 		senha: novaSenha,
-		contato: faker.random.numeric(3),
+		contato: faker.random.numeric(8),
 		cep: faker.random.numeric(8, { allowLeadingZeros: false }),
 		logradouro: faker.address.street(),
 		numero_logradouro: faker.random.numeric(3),
@@ -32,6 +32,6 @@ module.exports = {
 	},
 
 	async down(queryInterface, Sequelize) {
-		return queryInterface.bulkDelete("Users", null, {});
+		return queryInterface.bulkDelete("users", null, {});
 	}
 };
