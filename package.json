@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "dev": "nodemon ./src/shared/infra/http/server.js"
   },
   "repository": {
@@ -31,12 +31,17 @@
     "sequelize-cli": "^6.4.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.18.5",
+    "@babel/preset-env": "^7.18.2",
     "@faker-js/faker": "^7.3.0",
+    "babel-jest": "^28.1.1",
     "eslint": "^8.18.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.26.0",
+    "jest": "^28.1.1",
     "nodemon": "^2.0.16",
-    "prettier": "^2.7.1"
+    "prettier": "^2.7.1",
+    "supertest": "^6.2.3"
   }
 }
