@@ -54,6 +54,10 @@ module.exports = {
 					key: "id"
 				}
 			},
+			petStatus: {
+				type: Sequelize.INTEGER,
+				defaultValue: 1
+			},
 			createdAt: {
 				type: Sequelize.DATE
 			},

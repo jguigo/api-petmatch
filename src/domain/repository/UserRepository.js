@@ -17,8 +17,7 @@ class UserRepository {
       return await User.update(objUser, { where: { id: userId } });
    }
    async destroy(userId) {
-      //Usuário vai ser deletado, ou apenas inativo? Vou deixar em aberto.
-      // return await User.destroy;
+      return await  User.update({ userStatus: 0 }, { where: { id: userId } });
    }
 }
 
