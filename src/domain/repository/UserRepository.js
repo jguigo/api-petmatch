@@ -1,24 +1,24 @@
-const { User } = require("../../shared/infra/database/models/index");
+const { Users } = require("../../shared/infra/database/models/index");
 
 class UserRepository {
-   async findAll() {
-      return await User.findAll();
-   }
-   async findOne(userId) {
-      return await User.findByPk(userId);
-   }
-   async findByEmail(userEmail) {
-      return await User.findOne({ where: { email: userEmail } });
-   }
-   async create(objUser) {
-      return await User.create(objUser);
-   }
-   async update(userId, objUser) {
-      return await User.update(objUser, { where: { id: userId } });
-   }
-   async destroy(userId) {
-      return await  User.update({ userStatus: 0 }, { where: { id: userId } });
-   }
+  async findAll() {
+    return await Users.findAll();
+  }
+  async findOne(userId) {
+    return await Users.findByPk(userId);
+  }
+  async findByEmail(userEmail) {
+    return await Users.findOne({ where: { email: userEmail } });
+  }
+  async create(objUser) {
+    return await Users.create(objUser);
+  }
+  async update(userId, objUser) {
+    return await Users.update(objUser, { where: { id: userId } });
+  }
+  async destroy(userId) {
+    return await Users.update({ userStatus: 0 }, { where: { id: userId } });
+  }
 }
 
 module.exports = UserRepository;
