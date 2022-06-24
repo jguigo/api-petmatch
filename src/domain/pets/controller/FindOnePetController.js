@@ -1,9 +1,9 @@
-const { findOnePetUserCase } = require('../useCase/index');
+const { findOnePetUseCase } = require('../useCase/index');
 
 class FindOnePetController {
     async findOne(req, res) {
         try {
-            const result = await findOnePetUserCase.findOne(req)
+            const result = await findOnePetUseCase.findOne(req)
 
             if (result instanceof Error) {
                 return res.status(400).json(result.message);
