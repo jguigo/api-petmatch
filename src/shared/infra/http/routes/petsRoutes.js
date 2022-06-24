@@ -4,5 +4,6 @@ const { createPetController, findAllPetController, findOnePetController } = requ
 const routes = express.Router();
 
 routes.get("/pets", findAllPetController.findAll);
+routes.get("/pets/:id", findOnePetController.findOne);
 
 module.exports = routes;
