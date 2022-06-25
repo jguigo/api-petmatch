@@ -15,6 +15,7 @@ const Users = db.define("users", {
     email: {
         type: DataTypes.STRING,
         allowNull: false,
+        unique: true,
     },
     cpf: {
         type: DataTypes.STRING,
