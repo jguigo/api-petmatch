@@ -16,15 +16,17 @@ class AuthUseCase {
             return new Error("Senha inválida!");
         }
 
-        const token = jwt.sign(
-            {
-                id: user.id,
-                email: user.email,
-                nome: user.nome,
-            },
-            secret.key,
-        );
-        return token;
+        const userInfos = {
+            id: user.id,
+            userStatus: user.userStatus == 1 ? true : false,
+            permissao: user.permissao == 0 ? "user" : "admin",
+        };
+
+        const token = jwt.sign(userInfos, secret.key);
+
+        Object.assign(userInfos, { token });
+
+        return userInfos;
     }
 }
 
