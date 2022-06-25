@@ -22,6 +22,7 @@ for (let i = 0; i < 10; i++) {
         cidade: faker.address.cityName(),
         uf: faker.address.state(),
         sobre: faker.lorem.words(10),
+        permissao: 1,
         userStatus: 1,
         createdAt: new Date(),
         updatedAt: new Date(),

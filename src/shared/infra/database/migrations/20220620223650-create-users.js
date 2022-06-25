@@ -59,6 +59,9 @@ module.exports = {
             sobre: {
                 type: Sequelize.STRING,
             },
+            permissao: {
+                type: Sequelize.INTEGER,
+            },
             userStatus: {
                 type: Sequelize.INTEGER,
                 defaultValue: 1,

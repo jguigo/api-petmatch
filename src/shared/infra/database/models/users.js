@@ -58,6 +58,10 @@ const Users = db.define("users", {
     sobre: {
         type: DataTypes.STRING,
     },
+    permissao: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+    },
     userStatus: {
         type: DataTypes.INTEGER,
         defaultValue: 1,
