@@ -16,6 +16,7 @@ const UserController = {
             bairro,
             cidade,
             uf,
+            sobre,
         } = req.body;
         const newPass = bcrypt.hashSync(senha, 10);
         try {
@@ -32,6 +33,7 @@ const UserController = {
                 bairro,
                 cidade,
                 uf,
+                sobre,
                 userStatus: 1,
             });
             return res.status(201).json(newUser);

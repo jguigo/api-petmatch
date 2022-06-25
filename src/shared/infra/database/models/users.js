@@ -55,6 +55,9 @@ const Users = db.define("users", {
         type: DataTypes.STRING,
         allowNull: false,
     },
+    sobre: {
+        type: DataTypes.STRING,
+    },
     userStatus: {
         type: DataTypes.INTEGER,
         defaultValue: 1,
