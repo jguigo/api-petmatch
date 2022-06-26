@@ -9,7 +9,7 @@ class FindAllPetController {
 
     } catch (error) {
       console.log(error);
-        return res.status(500).json(`INTERNAL ERROR: ${error}`);
+        return res.status(500).json(`Nenhum pet cadastrado!`);
     }
   }
 }

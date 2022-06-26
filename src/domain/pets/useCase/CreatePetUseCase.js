@@ -4,7 +4,7 @@ class CreatePetUseCase {
     async create(data) {
         const objPet = data.body;
         Object.assign(objPet, {
-            userId: data.auth.id
+            userID: data.auth.id
         });
 
         const newPet = await petRepository.create(objPet);

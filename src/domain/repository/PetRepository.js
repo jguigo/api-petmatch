@@ -2,11 +2,11 @@ const { Pets } = require("../../shared/infra/database/models/index");
 
 class PetRepository {
     async findAll() {
-        return await Pets.findAll();
+        return await Pets.findAll( { where: { petStatus: 1 } } );
     }
 
     async findOne(petId) {
-        return await Pets.findByPk(petId);
+        return await Pets.findOne({ where: {id: petId, petStatus: 1 } });
     }
 
     async create(objPet) {

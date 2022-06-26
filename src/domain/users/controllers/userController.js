@@ -40,7 +40,7 @@ const UserController = {
             });
             return res.status(201).json(newUser);
         } catch (error) {
-            res.status(500).json("Erro ao criar usuário");
+            res.status(500).json("Erro ao criar usuário" + error);
         }
     },
 
