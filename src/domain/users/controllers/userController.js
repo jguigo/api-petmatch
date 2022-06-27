@@ -22,7 +22,15 @@ const UserController = {
                 where: {
                     userStatus: 1,
                 },
-                attributes: { exclude: "password" },
+                attributes: {
+                    exclude: [
+                        "senha",
+                        "permissao",
+                        "userStatus",
+                        "createdAt",
+                        "updatedAt",
+                    ],
+                },
             });
 
             if (!allUsers) {
@@ -43,7 +51,15 @@ const UserController = {
                     userStatus: 1,
                     id: id,
                 },
-                attributes: ["id", "nome", "email", "cidade", "uf"],
+                attributes: {
+                    exclude: [
+                        "senha",
+                        "permissao",
+                        "userStatus",
+                        "createdAt",
+                        "updatedAt",
+                    ],
+                },
             });
             if (user) {
                 return res.status(200).json(user);
@@ -85,6 +101,39 @@ const UserController = {
                 .json(`Usuario ${userToDestroy.nome} deletado`);
         } catch (error) {
             return res.status(500).json("Ocorreu um erro ao listar usuários");
+        }
+    },
+
+    async alterar(req, res) {
+        try {
+            const { id } = req.params;
+
+            const userToUpdate = await Users.findOne({
+                where: {
+                    userStatus: 1,
+                    id: id,
+                },
+            });
+
+            if (!userToUpdate) {
+                return res.status(404).json("usuario nao encontrado");
+            }
+            console.log(userToUpdate);
+
+            await Users.update(
+                {
+                    ...req.body,
+                },
+                {
+                    where: {
+                        id: id,
+                    },
+                },
+            );
+
+            return res.status(202).json(`Usuario ${id} alterado`);
+        } catch (error) {
+            return res.status(400).json("usuario nao alterado");
         }
     },
 };

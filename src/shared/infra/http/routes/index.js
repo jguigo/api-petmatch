@@ -13,6 +13,7 @@ routes.get("/users", UserController.findAll);
 routes.get("/users/:id", UserController.findOne);
 routes.post("/users/", UserController.create);
 routes.delete("/users/:id", UserController.destroyUser);
+routes.put("/users/:id", UserController.alterar);
 
 routes.use(userRoutes);
 routes.use(petsRoutes);
