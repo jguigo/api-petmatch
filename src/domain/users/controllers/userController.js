@@ -3,40 +3,12 @@ const bcrypt = require("bcryptjs");
 
 const UserController = {
     async create(req, res) {
-        const {
-            nome,
-            email,
-            cpf,
-            senha,
-            contato,
-            cep,
-            logradouro,
-            numero_logradouro,
-            complemento,
-            bairro,
-            cidade,
-            uf,
-            sobre,
-            permissao,
-        } = req.body;
+        const { senha } = req.body;
         const newPass = bcrypt.hashSync(senha, 10);
         try {
             const newUser = await Users.create({
-                nome,
-                email,
-                cpf,
+                ...req.body,
                 senha: newPass,
-                contato,
-                cep,
-                logradouro,
-                numero_logradouro,
-                complemento,
-                bairro,
-                cidade,
-                uf,
-                sobre,
-                permissao,
-                userStatus: 1,
             });
             return res.status(201).json(newUser);
         } catch (error) {
@@ -65,8 +37,7 @@ const UserController = {
 
     async findOne(req, res) {
         try {
-            const id = req.params["id"];
-
+            const { id } = req.params;
             const user = await Users.findOne({
                 where: {
                     userStatus: 1,
@@ -79,6 +50,39 @@ const UserController = {
             } else {
                 return res.status(404).json("usuario nao encontrado");
             }
+        } catch (error) {
+            return res.status(500).json("Ocorreu um erro ao listar usuários");
+        }
+    },
+
+    async destroyUser(req, res) {
+        try {
+            const { id } = req.params;
+
+            const userToDestroy = await Users.findOne({
+                where: {
+                    userStatus: 1,
+                    id: id,
+                },
+            });
+
+            if (!userToDestroy) {
+                return res.status(404).json("usuario nao encontrado");
+            }
+
+            await Users.update(
+                {
+                    userStatus: 0,
+                },
+                {
+                    where: {
+                        id: id,
+                    },
+                },
+            );
+            return res
+                .status(202)
+                .json(`Usuario ${userToDestroy.nome} deletado`);
         } catch (error) {
             return res.status(500).json("Ocorreu um erro ao listar usuários");
         }

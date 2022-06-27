@@ -12,6 +12,7 @@ routes.post("/login", loginValidation.login, authController.auth);
 routes.get("/users", UserController.findAll);
 routes.get("/users/:id", UserController.findOne);
 routes.post("/users/", UserController.create);
+routes.delete("/users/:id", UserController.destroyUser);
 
 routes.use(userRoutes);
 routes.use(petsRoutes);
