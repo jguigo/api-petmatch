@@ -15,11 +15,11 @@ const Users = db.define("users", {
     email: {
         type: DataTypes.STRING,
         allowNull: false,
-        unique: true,
+        unique: false,
     },
     cpf: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
     },
     senha: {
         type: DataTypes.STRING,
@@ -27,41 +27,43 @@ const Users = db.define("users", {
     },
     contato: {
         type: DataTypes.INTEGER,
-        allowNull: false,
+        allowNull: true,
     },
     cep: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
     },
     logradouro: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
     },
     numero_logradouro: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
     },
     complemento: {
         type: DataTypes.STRING,
     },
     bairro: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
     },
     cidade: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
     },
     uf: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
     },
     sobre: {
         type: DataTypes.STRING,
+        allowNull: true,
     },
     permissao: {
         type: DataTypes.INTEGER,
         allowNull: false,
+        defaultValue: 1,
     },
     userStatus: {
         type: DataTypes.INTEGER,

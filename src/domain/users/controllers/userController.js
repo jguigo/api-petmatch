@@ -1,5 +1,6 @@
 const { Users } = require("../../../shared/infra/database/models");
 const bcrypt = require("bcryptjs");
+const e = require("express");
 
 const UserController = {
     async create(req, res) {
@@ -12,7 +13,12 @@ const UserController = {
             });
             return res.status(201).json(newUser);
         } catch (error) {
-            res.status(500).json("Erro ao criar usuário" + error);
+            if (error.name == "SequelizeUniqueConstraintError") {
+                res.status(500).json("Email ja cadastrado");
+            } else {
+                res.status(500).json("Erro ao criar usuário");
+            }
+            res.status(500);
         }
     },
 
