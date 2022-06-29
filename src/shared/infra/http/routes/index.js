@@ -15,7 +15,7 @@ routes.get("/users", UserController.findAll);
 routes.get("/users/:id", validation.findOne, UserController.findOne);
 routes.post("/users/", validationUser.create, UserController.create);
 routes.delete("/users/:id", validation.destroy, UserController.destroyUser);
-routes.put("/users/:id", UserController.alterar);
+routes.put("/users/:id", validationUser.update, UserController.alterar);
 
 routes.use(userRoutes);
 routes.use(petsRoutes);

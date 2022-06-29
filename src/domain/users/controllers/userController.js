@@ -113,6 +113,7 @@ const UserController = {
     async alterar(req, res) {
         try {
             const { id } = req.params;
+            const { senha } = req.body;
 
             const userToUpdate = await Users.findOne({
                 where: {
@@ -124,7 +125,6 @@ const UserController = {
             if (!userToUpdate) {
                 return res.status(404).json("usuario nao encontrado");
             }
-            console.log(userToUpdate);
 
             await Users.update(
                 {
@@ -136,6 +136,20 @@ const UserController = {
                     },
                 },
             );
+
+            if (senha) {
+                const newPass = bcrypt.hashSync(senha, 10);
+                await Users.update(
+                    {
+                        senha: newPass,
+                    },
+                    {
+                        where: {
+                            id: id,
+                        },
+                    },
+                );
+            }
 
             return res.status(202).json(`Usuario ${id} alterado`);
         } catch (error) {

@@ -9,7 +9,7 @@ module.exports = validate({
         nome: Joi.string().required(),
         email: Joi.string().email().required(),
         cpf: Joi.string(),
-        senha: Joi.string().required(),
+        senha: Joi.string(),
         contato: Joi.number(),
         cep: Joi.string(),
         logradouro: Joi.string(),
@@ -19,7 +19,7 @@ module.exports = validate({
         cidade: Joi.string(),
         uf: Joi.string(),
         sobre: Joi.string(),
-        permissao: Joi.number().required(),
-        userStatus: Joi.number().required(),
+        permissao: Joi.number(),
+        userStatus: Joi.number(),
     }),
 });
