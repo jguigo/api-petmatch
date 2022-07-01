@@ -37,12 +37,33 @@ module.exports = {
 				type: Sequelize.STRING,
 				allowNull: false
 			},
-			chip: {
-				type: Sequelize.INTEGER,
+			cor: {
+				type: Sequelize.STRING,
 				allowNull: false
 			},
+			raca: {
+				type: Sequelize.STRING,
+				allowNull: false
+			},
+			castrado: {
+				type: Sequelize.BOOLEAN,
+				allowNull: false
+			},
+			vacinado: {
+				type: Sequelize.BOOLEAN,
+				allowNull: false
+			},
+			chip: {
+				type: Sequelize.INTEGER,
+				allowNull: true
+			},
 			sobre: {
-				type: Sequelize.STRING
+				type: Sequelize.STRING,
+				allowNull: true
+			},
+			petImage: {
+				type: Sequelize.STRING,
+				allowNull: false
 			},
 			userID: {
 				type: Sequelize.INTEGER,
