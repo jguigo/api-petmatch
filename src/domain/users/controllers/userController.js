@@ -3,24 +3,7 @@ const bcrypt = require("bcryptjs");
 const e = require("express");
 
 const UserController = {
-    async create(req, res) {
-        const { senha } = req.body;
-        const newPass = bcrypt.hashSync(senha, 10);
-        try {
-            const newUser = await Users.create({
-                ...req.body,
-                senha: newPass,
-            });
-            return res.status(201).json(newUser);
-        } catch (error) {
-            if (error.name == "SequelizeUniqueConstraintError") {
-                res.status(500).json("Email ja cadastrado");
-            } else {
-                res.status(500).json("Erro ao criar usuário");
-            }
-            res.status(500);
-        }
-    },
+    
 
     async findAll(req, res) {
         try {
