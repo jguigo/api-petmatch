@@ -8,7 +8,7 @@ class CreateUserUseCase {
         const checkEmail = await userRepository.checkEmail(objUser.email);
 
         if (checkEmail) {
-            return new Error("Email já cadastrado");
+            throw new Error("Email já cadastrado");
         }
 
         const { senha } = data.body;
