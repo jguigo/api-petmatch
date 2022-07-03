@@ -7,7 +7,7 @@ class FindByEmailUserUseCase {
         const userByEmail = await userRepository.findByEmail(email);
 
         if (!userByEmail) {
-            return new Error("Nenhum usuario cadastrado com este ID!");
+            return new Error("Nenhum usuario cadastrado com este email!");
         }
 
         return userByEmail;
