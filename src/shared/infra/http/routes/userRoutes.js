@@ -7,13 +7,14 @@ const {
     findAllUserController,
     findOneUserController,
     findByEmailUserController,
+    deleteUserController,
 } = require("../../../../domain/users/controllers/index");
 
 routes.get("/users", findAllUserController.findAll);
 routes.get("/users/:id", validation.findOne, findOneUserController.findOne);
 routes.post("/users/", validationUser.create, createUserController.create);
 routes.get("/users/email/:email", findByEmailUserController.findOne);
-// routes.delete("/users/:id", validation.destroy, UserController.destroyUser);
+routes.delete("/users/:id", validation.destroy, deleteUserController.findOne);
 // routes.put("/users/:id", validationUser.update, UserController.alterar);
 
 module.exports = routes;

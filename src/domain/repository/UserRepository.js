@@ -17,9 +17,6 @@ class UserRepository {
                 userStatus: 1,
                 id: userId,
             },
-            attributes: {
-                exclude: ["userStatus"],
-            },
         });
     }
     async findByEmail(userEmail) {
