@@ -5,7 +5,7 @@ class CreateUserController {
         try {
             const response = await createUserUseCase.create(req);
             if (response instanceof Error) {
-                res.status(400).json(response.message);
+                return res.status(400).json(response.message);
             }
             return res.status(201).json(response);
         } catch (error) {
