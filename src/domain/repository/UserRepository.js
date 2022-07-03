@@ -23,7 +23,12 @@ class UserRepository {
         });
     }
     async findByEmail(userEmail) {
-        return await Users.findOne({ where: { email: userEmail } });
+        return await Users.findOne({
+            where: { userStatus: 1, email: userEmail },
+            attributes: {
+                exclude: ["userStatus"],
+            },
+        });
     }
     async checkEmail(userEmail) {
         return await Users.count({ where: { email: userEmail } });
