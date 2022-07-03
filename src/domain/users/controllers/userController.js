@@ -3,35 +3,6 @@ const bcrypt = require("bcryptjs");
 const e = require("express");
 
 const UserController = {
-    
-
-    async findAll(req, res) {
-        try {
-            const allUsers = await Users.findAll({
-                where: {
-                    userStatus: 1,
-                },
-                attributes: {
-                    exclude: [
-                        "senha",
-                        "permissao",
-                        "userStatus",
-                        "createdAt",
-                        "updatedAt",
-                    ],
-                },
-            });
-
-            if (!allUsers) {
-                return res.status(200).json("Nenhum usuário cadastrado!");
-            }
-
-            res.status(200).json(allUsers);
-        } catch (error) {
-            return res.status(500).json("Ocorreu um erro ao listar usuários");
-        }
-    },
-
     async findOne(req, res) {
         try {
             const { id } = req.params;

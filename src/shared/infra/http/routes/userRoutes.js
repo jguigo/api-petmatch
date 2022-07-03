@@ -5,10 +5,11 @@ const validation = require("../../../../domain/pets/validation/index");
 const {
     createUserController,
     findAllUserController,
+    findOneUserController,
 } = require("../../../../domain/users/controllers/index");
 
 routes.get("/users", findAllUserController.findAll);
-// routes.get("/users/:id", validation.findOne, UserController.findOne);
+routes.get("/users/:id", validation.findOne, findOneUserController.findOne);
 routes.post("/users/", validationUser.create, createUserController.create);
 // routes.delete("/users/:id", validation.destroy, UserController.destroyUser);
 // routes.put("/users/:id", validationUser.update, UserController.alterar);

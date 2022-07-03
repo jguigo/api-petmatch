@@ -17,6 +17,8 @@ class CreateUserUseCase {
         const newUser = await userRepository.create({
             ...objUser,
             senha: newPass,
+            permissao: 1,
+            userStatus: 1,
         });
 
         return newUser;

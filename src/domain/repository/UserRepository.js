@@ -2,10 +2,25 @@ const { Users } = require("../../shared/infra/database/models/index");
 
 class UserRepository {
     async findAll() {
-        return await Users.findAll();
+        return await Users.findAll({
+            where: {
+                userStatus: 1,
+            },
+            attributes: {
+                exclude: ["userStatus"],
+            },
+        });
     }
     async findOne(userId) {
-        return await Users.findByPk(userId);
+        return await Users.findOne({
+            where: {
+                userStatus: 1,
+                id: userId,
+            },
+            attributes: {
+                exclude: ["userStatus"],
+            },
+        });
     }
     async findByEmail(userEmail) {
         return await Users.findOne({ where: { email: userEmail } });
