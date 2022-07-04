@@ -26,7 +26,7 @@ const Users = db.define("users", {
         allowNull: false,
     },
     contato: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.STRING,
         allowNull: true,
     },
     cep: {

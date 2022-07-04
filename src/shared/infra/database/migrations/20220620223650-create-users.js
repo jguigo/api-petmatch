@@ -20,42 +20,35 @@ module.exports = {
             },
             cpf: {
                 type: Sequelize.STRING,
-                allowNull: false,
+                unique: true,
             },
             senha: {
                 type: Sequelize.STRING,
                 allowNull: false,
             },
             contato: {
-                type: Sequelize.INTEGER,
-                allowNull: false,
+                type: Sequelize.STRING,
             },
             cep: {
                 type: Sequelize.STRING,
-                allowNull: false,
             },
             logradouro: {
                 type: Sequelize.STRING,
-                allowNull: false,
             },
             numero_logradouro: {
                 type: Sequelize.STRING,
-                allowNull: false,
             },
             complemento: {
                 type: Sequelize.STRING,
             },
             bairro: {
                 type: Sequelize.STRING,
-                allowNull: false,
             },
             cidade: {
                 type: Sequelize.STRING,
-                allowNull: false,
             },
             uf: {
                 type: Sequelize.STRING,
-                allowNull: false,
             },
             sobre: {
                 type: Sequelize.STRING,
