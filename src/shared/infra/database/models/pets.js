@@ -36,12 +36,28 @@ const Pets = db.define("pets", {
         type: DataTypes.STRING,
         allowNull: false,
     },
+    cor: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    raca: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    castrado: {
+        type: DataTypes.BOOLEAN,
+        allowNull: false
+    },
+
     chip: {
         type: DataTypes.INTEGER,
-        allowNull: false,
     },
     sobre: {
         type: DataTypes.STRING,
+    },
+    petImage: {
+        type: DataTypes.STRING,
+        allowNull: false
     },
     userID: {
         type: DataTypes.INTEGER,
