@@ -6,8 +6,8 @@ module.exports = validate({
     }),
 
     body: Joi.object({
-        nome: Joi.string().required(),
-        email: Joi.string().email().required(),
+        nome: Joi.string(),
+        email: Joi.string().email(),
         cpf: Joi.string(),
         senha: Joi.string(),
         contato: Joi.number(),
