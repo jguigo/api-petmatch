@@ -48,12 +48,16 @@ const Pets = db.define("pets", {
         type: DataTypes.BOOLEAN,
         allowNull: false
     },
-
+    vacinado: {
+        type: DataTypes.BOOLEAN,
+        allowNull: false
+    },
     chip: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.STRING,
     },
     sobre: {
         type: DataTypes.STRING,
+        allowNull: false
     },
     petImage: {
         type: DataTypes.STRING,
