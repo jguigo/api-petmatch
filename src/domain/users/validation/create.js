@@ -6,7 +6,7 @@ module.exports = validate({
         email: Joi.string().email().required(),
         cpf: Joi.string(),
         senha: Joi.string().required(),
-        contato: Joi.number(),
+        contato: Joi.string(),
         cep: Joi.string(),
         logradouro: Joi.string(),
         numero_logradouro: Joi.string(),

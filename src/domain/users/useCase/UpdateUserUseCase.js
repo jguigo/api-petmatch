@@ -20,10 +20,9 @@ class UpdateUserUseCase {
             const newPass = hashPassword(objUser.senha);
             objUser.senha = newPass;
         }
+        await userRepository.update(id, objUser);
 
         const updateUser = await userRepository.findOne(id);
-
-        await userRepository.update(id, objUser);
 
         return updateUser;
     }

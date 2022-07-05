@@ -6,9 +6,13 @@ class CreateUserUseCase {
         const objUser = data.body;
 
         const checkEmail = await userRepository.checkEmail(objUser.email);
+        const checkCPF = await userRepository.checkCPF(objUser.cpf);
 
         if (checkEmail) {
             return new Error("Email já cadastrado");
+        }
+        if (checkCPF) {
+            return new Error("CPF já cadastrado");
         }
 
         const { senha } = data.body;

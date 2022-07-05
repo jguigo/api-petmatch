@@ -15,11 +15,12 @@ const Users = db.define("users", {
     email: {
         type: DataTypes.STRING,
         allowNull: false,
-        unique: false,
+        unique: true,
     },
     cpf: {
         type: DataTypes.STRING,
         allowNull: true,
+        unique: true,
     },
     senha: {
         type: DataTypes.STRING,

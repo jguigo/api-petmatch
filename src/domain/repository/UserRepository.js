@@ -19,6 +19,7 @@ class UserRepository {
             },
         });
     }
+
     async findByEmail(userEmail) {
         return await Users.findOne({
             where: { userStatus: 1, email: userEmail },
@@ -29,6 +30,9 @@ class UserRepository {
     }
     async checkEmail(userEmail) {
         return await Users.count({ where: { email: userEmail } });
+    }
+    async checkCPF(userCPF) {
+        return await Users.count({ where: { cpf: userCPF } });
     }
     async create(objUser) {
         return await Users.create(objUser);
