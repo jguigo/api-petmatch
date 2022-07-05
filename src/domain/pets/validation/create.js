@@ -13,7 +13,7 @@ module.exports = validate({
         raca: Joi.string().required(),
         castrado: Joi.boolean().required(),
         vacinado: Joi.boolean().required(),
-        chip: Joi.number().required(),
+        chip: Joi.string(),
         sobre: Joi.string().required(),
         petImage: Joi.string().required(),
     })
