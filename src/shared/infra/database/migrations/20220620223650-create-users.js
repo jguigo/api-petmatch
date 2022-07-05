@@ -13,6 +13,10 @@ module.exports = {
                 type: Sequelize.STRING,
                 allowNull: false,
             },
+            sobrenome: {
+                type: Sequelize.STRING,
+                allowNull: false,
+            },
             email: {
                 type: Sequelize.STRING,
                 allowNull: false,
@@ -55,6 +59,7 @@ module.exports = {
             },
             permissao: {
                 type: Sequelize.INTEGER,
+                defaultValue: 0,
             },
             userStatus: {
                 type: Sequelize.INTEGER,
