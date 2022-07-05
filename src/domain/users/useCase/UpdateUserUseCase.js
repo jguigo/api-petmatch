@@ -14,15 +14,16 @@ class UpdateUserUseCase {
         if (!id == loginUserId) {
             return new Error("Sem autorização para realizar está ação!");
         }
+        console.log(`Resposta 1 ${objUser.senha}`);
 
         if (objUser.senha) {
-            const newPass = hashPassword(senha);
+            const newPass = hashPassword(objUser.senha);
             objUser.senha = newPass;
         }
 
-        await userRepository.update(id, objUser);
-
         const updateUser = await userRepository.findOne(id);
+
+        await userRepository.update(id, objUser);
 
         return updateUser;
     }
