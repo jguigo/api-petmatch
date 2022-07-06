@@ -2,7 +2,7 @@ const Users = require("./users");
 const Pets = require("./pets");
 const Adocao = require("./adocao");
 
-Users.hasMany(PeAts, {
+Users.hasMany(Pets, {
     foreignKey: "userID",
 });
 
