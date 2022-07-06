@@ -9,7 +9,8 @@ for (let i = 0; i < 10; i++) {
     const pass = faker.random.alpha(10);
     const novaSenha = bcrypt.hashSync(pass, 10);
     seed.push({
-        nome: faker.name.findName(),
+        nome: faker.name.firstName(),
+        sobrenome: faker.name.lastName(),
         email: faker.internet.email(),
         cpf: faker.random.numeric(11, { allowLeadingZeros: false }),
         senha: novaSenha,
