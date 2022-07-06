@@ -19,6 +19,6 @@ module.exports = validate({
         vacinado: Joi.boolean().required(),
         chip: Joi.string(),
         sobre: Joi.string().required(),
-        petImage: Joi.any().required(),
+        petImage: Joi.any(),
     }),
 });
