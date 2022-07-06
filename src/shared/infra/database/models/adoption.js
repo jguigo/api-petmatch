@@ -1,7 +1,7 @@
 const db = require("../index");
 const { DataTypes } = require("sequelize");
 
-const Adocao = db.define("pets", {
+const Adoption = db.define("pets", {
     id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
@@ -28,4 +28,4 @@ const Adocao = db.define("pets", {
     },
 });
 
-module.exports = Adocao;
+module.exports = Adoption;
