@@ -5,33 +5,20 @@ const routes = express.Router();
 const auth = require("../../../middleware/auth");
 const {
     createAdoptionController,
-    findAllAdoptionController,
-    findOneAdoptionController,
-    deleteAdoptionController,
-    updateAdoptionController,
+    chooseAdoptionController,
 } = require("../../../../domain/adoption/controllers/index");
 
-routes.get("/adoption", findAllAdoptionController.findAll);
-routes.get(
-    "/adoption/:id",
-    // validation.findOne,
-    findOneAdoptionController.findOne,
-);
 routes.post(
     "/adoption/",
     // validationUser.create,
     createAdoptionController.create,
 );
-routes.delete(
-    "/adoption/:id",
-    // validation.destroy,
-    deleteAdoptionController.findOne,
-);
+
 routes.put(
     "/adoption/:id",
     auth,
     // validationUser.update,
-    updateAdoptionController.update,
+    chooseAdoptionController.update,
 );
 
 module.exports = routes;

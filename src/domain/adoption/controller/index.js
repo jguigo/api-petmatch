@@ -1,19 +1,13 @@
-const FindAllAdoptionController = require("./FindAllAdoptionController");
-const FindOneAdoptionController = require("./FindOneAdoptionController");
 const CreateAdoptionController = require("./CreateAdoptionController");
-const UpdateAdoptionController = require("./UpdateAdoptionController");
-const DeleteAdoptionController = require("./DeleteAdoptionController");
+const ChooseAdoptionController = require("./ChooseAdoptionController");
+const FindOneAdoptionController = require("./FindOneAdoptionController");
 
-const findAllAdoptionController = new FindAllAdoptionController();
-const findOneAdoptionController = new FindOneAdoptionController();
 const createAdoptionController = new CreateAdoptionController();
-const updateAdoptionController = new UpdateAdoptionController();
-const deleteAdoptionController = new DeleteAdoptionController();
+const chooseAdoptionController = new ChooseAdoptionController();
+const findOneAdoptionController = new FindOneAdoptionController();
 
 module.exports = {
-    findAllAdoptionController,
-    findOneAdoptionController,
     createAdoptionController,
-    updateAdoptionController,
-    deleteAdoptionController,
+    chooseAdoptionController,
+    findOneAdoptionController,
 };

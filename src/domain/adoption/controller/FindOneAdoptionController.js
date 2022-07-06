@@ -1,6 +1,6 @@
 const { findOneAdoptionUseCase } = require("../useCase/index");
 
-class FindOneAdoptionController {
+class FindOnePetController {
     async findOne(req, res) {
         try {
             const result = await findOneAdoptionUseCase.findOne(req);
@@ -16,4 +16,4 @@ class FindOneAdoptionController {
     }
 }
 
-module.exports = FindOneAdoptionController;
+module.exports = FindOnePetController;

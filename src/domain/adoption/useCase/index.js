@@ -1,19 +1,13 @@
-const FindAllAdoptionUseCase = require("./FindAllAdoptionUseCase");
+const CreateAdoptionUseCase = require("./CreateAdoptiontUseCase");
+const ChooseAdoptionUseCase = require("./ChooseAdoptionUseCase");
 const FindOneAdoptionUseCase = require("./FindOneAdoptionUseCase");
-const CreateAdoptionUseCase = require("./CreateAdoptionUseCase");
-const UpdateAdoptionUseCase = require("./UpdateAdoptionUseCase");
-const DeleteAdoptionUseCase = require("./DeleteAdoptionUseCase");
 
-const findOneAdoptionUseCase = new FindOneAdoptionUseCase();
-const findAllAdoptionUseCase = new FindAllAdoptionUseCase();
 const createAdoptionUseCase = new CreateAdoptionUseCase();
-const updateAdoptionUseCase = new UpdateAdoptionUseCase();
-const deleteAdoptionUseCase = new DeleteAdoptionUseCase();
+const chooseAdoptionUseCase = new ChooseAdoptionUseCase();
+const findOneAdoptionUseCase = new FindOneAdoptionUseCase();
 
 module.exports = {
-    findAllAdoptionUseCase,
-    findOneAdoptionUseCase,
     createAdoptionUseCase,
-    updateAdoptionUseCase,
-    deleteAdoptionUseCase,
+    chooseAdoptionUseCase,
+    findOneAdoptionUseCase,
 };
