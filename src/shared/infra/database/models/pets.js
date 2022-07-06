@@ -9,7 +9,7 @@ const Pets = db.define("pets", {
         autoIncrement: true,
     },
     especie: {
-        type: DataTypes.STRING,
+        type: DataTypes.ENUM("Cachorro", "Gato", "Ave", "Réptil", "Peixe"),
         allowNull: false,
     },
     nome: {
@@ -21,7 +21,7 @@ const Pets = db.define("pets", {
         allowNull: false,
     },
     sexo: {
-        type: DataTypes.STRING,
+        type: DataTypes.ENUM("Macho", "Fêmea"),
         allowNull: false,
     },
     peso: {
@@ -33,11 +33,11 @@ const Pets = db.define("pets", {
         allowNull: false,
     },
     porte: {
-        type: DataTypes.STRING,
+        type: DataTypes.ENUM("Pequeno", "Médio", "Grande"),
         allowNull: false,
     },
     cor: {
-        type: DataTypes.STRING,
+        type: DataTypes.ENUM("Escuro", "claro", "Misto", "Caramelo"),
         allowNull: false
     },
     raca: {

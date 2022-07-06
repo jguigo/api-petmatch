@@ -35,7 +35,7 @@ const upload = multer({
    limits: { fieldSize: maxSize },
 });
 
-const uploadImageProfile = upload.single(imageProfile)
-const imagePet = upload.array([petImage, maxFile])
+const uploadImageProfile = upload.single("imageProfile")
+const imagePet = upload.array(["petImage", maxFile])
 
 module.exports = {uploadImageProfile, imagePet};
