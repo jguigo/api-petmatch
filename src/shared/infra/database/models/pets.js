@@ -37,31 +37,31 @@ const Pets = db.define("pets", {
         allowNull: false,
     },
     cor: {
-        type: DataTypes.ENUM("Escuro", "claro", "Misto", "Caramelo"),
-        allowNull: false
+        type: DataTypes.ENUM("Escuro", "Claro", "Misto", "Caramelo"),
+        allowNull: false,
     },
     raca: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: false,
     },
     castrado: {
         type: DataTypes.BOOLEAN,
-        allowNull: false
+        allowNull: false,
     },
     vacinado: {
         type: DataTypes.BOOLEAN,
-        allowNull: false
+        allowNull: false,
     },
     chip: {
         type: DataTypes.STRING,
     },
     sobre: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: false,
     },
     petImage: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: false,
     },
     userID: {
         type: DataTypes.INTEGER,
