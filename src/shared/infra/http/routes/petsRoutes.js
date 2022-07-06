@@ -14,8 +14,25 @@ const routes = express.Router();
 
 routes.get("/pets", findAllPetController.findAll);
 routes.get("/pets/:id", validation.findOne, findOnePetController.findOne);
-routes.post("/pets", auth, validation.create, upload.imagePet, createPetController.create);
-routes.put("/pets/:id", auth, validation.update, upload.imagePet, updatePetController.update);
-routes.delete("/pets/:id", auth, validation.destroy, deletePetController.destroy);
+routes.post(
+    "/pets",
+    auth,
+    upload.imagePet,
+    validation.create,
+    createPetController.create,
+);
+routes.put(
+    "/pets/:id",
+    auth,
+    upload.imagePet,
+    validation.update,
+    updatePetController.update,
+);
+routes.delete(
+    "/pets/:id",
+    auth,
+    validation.destroy,
+    deletePetController.destroy,
+);
 
 module.exports = routes;
