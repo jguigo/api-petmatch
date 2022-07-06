@@ -1,5 +1,6 @@
 const { petRepository } = require("../../repository/index");
 const uploads = require("../../../config/cloudinary");
+const fs = require("fs");
 
 class UpdatePetUseCase {
     async update(data) {
@@ -20,6 +21,9 @@ class UpdatePetUseCase {
 
         if (uploadedImage) {
             const linkImage = await uploads(uploadedImage.path, "petsImage");
+
+            fs.unlinkSync(uploadedImage.path);
+
             Object.assign(objPet, {
                 petImage: linkImage.imageUrl,
             });
