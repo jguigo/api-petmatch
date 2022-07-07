@@ -16,8 +16,10 @@ class AdoptionRepository {
             where: { id: adoptionId, statusAdocao: STATUS.OnApproval },
         });
     }
-    async findAll() {
-        return await Adoption.findAll();
+    async findAll(where = {}) {
+        return await Adoption.findAll({
+            where: { ...where, statusAdocao: STATUS.OnApproval },
+        });
     }
 }
 
