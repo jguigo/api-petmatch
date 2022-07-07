@@ -19,7 +19,7 @@ class PetRepository {
     }
 
     async destroy(petId) {
-        return await Pets.update({ petStatus: 0 }, { where: { id: petId } });
+        return await Pets.update({ petStatus: STATUS.Deleted }, { where: { id: petId } });
     }
 }
 
