@@ -20,7 +20,7 @@ class CreateAdoptionUseCase {
 
         const newAdoption = await adoptionRepository.create(objAdoption);
 
-        await petRepository.update({ petStatus: STATUS.OnApproval }, id);
+        await petRepository.update(id, { petStatus: STATUS.OnApproval });
 
         return newAdoption;
     }
