@@ -3,11 +3,23 @@ const routes = express.Router();
 
 const auth = require("../../../middleware/auth");
 const {
+    findAllAdoptionByOwnerController,
+    findAllAdoptionByUserController,
     createAdoptionController,
     acceptAdoptionApplyController,
     rejectAdoptionApplyController,
 } = require("../../../../domain/adoption/controller");
 
+routes.get(
+    "/adoption/owner",
+    auth,
+    findAllAdoptionByOwnerController.findAllByOwnerId,
+);
+routes.get(
+    "/adoption/user",
+    auth,
+    findAllAdoptionByUserController.findAllByUserId,
+);
 routes.post("/adoption/:id", auth, createAdoptionController.create);
 routes.post(
     "/adoption/:adoptionId/accept",
