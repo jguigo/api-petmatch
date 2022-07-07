@@ -7,7 +7,7 @@ class FindPetByEspecieController {
                 req,
             );
 
-            res.status(2001).json(petsByEspecie);
+            res.status(200).json(petsByEspecie);
         } catch (error) {
             return res.status(500).json(`INTERNAL ERROR: ${error}`);
         }
