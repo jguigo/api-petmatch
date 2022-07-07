@@ -1,5 +1,10 @@
 # 🐱🐶Pet Match!
 
+## 🗨️Descrição
+
+<p align="left"> Desafio final multitask, Hacker (Front/Back-end) e Hipster (Product Design) do Gama Academy XP41. A proposta desse projeto foi criar um sistema funcional, navegável e interativo de um empreendimento.</p>
+
+
 ## 📺Apresentação
 
 <p align="left"> Somos a Pet Match! Viemos com a intenção de tornar o processo de adoção do pet uma jornada mais leve, assertiva e segura. Queremos propor uma maneira de match, no qual a pessoa que está adotando tenha certeza do que está fazendo, sendo assim, uma adoção responsável e não impulsiva. Além disso, queremos que a pessoa que esteja doando seu pet tenha convicção de que, quem receberá seu pet seja uma pessoa com quem ele ficará bem e poderá proporcioná-lo uma ótima condição de vida.
