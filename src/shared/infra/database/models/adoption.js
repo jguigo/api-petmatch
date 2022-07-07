@@ -8,18 +8,22 @@ const Adoption = db.define("adocoes", {
         allowNull: false,
         autoIncrement: true,
     },
-    idUser: {
-        type: DataTypes.STRING,
-        allowNull: false,
-    },
-    idPet: {
-        type: DataTypes.STRING,
-        allowNull: false,
-    },
     statusAdocao: {
         type: DataTypes.INTEGER,
         allowNull: false,
-        defaultValue: 1,
+        defaultValue: 2,
+    },
+    pet_id: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+    ownerPet_id: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+    adoptionUser_id: {
+        type: DataTypes.STRING,
+        allowNull: false,
     },
     createdAt: {
         type: DataTypes.DATE,

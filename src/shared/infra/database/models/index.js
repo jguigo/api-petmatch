@@ -11,19 +11,19 @@ Pets.belongsTo(Users, {
 });
 
 Users.hasMany(Adoption, {
-    foreignKey: "idUser",
+    foreignKey: ["adoptionUser_id", "ownerPet_id"],
 });
 
 Adoption.belongsTo(Users, {
-    foreignKey: "idUser",
+    foreignKey: ["adoptionUser_id", "ownerPet_id"],
 });
 
 Pets.hasMany(Adoption, {
-    foreignKey: "idPets",
+    foreignKey: "pet_id",
 });
 
 Adoption.belongsTo(Pets, {
-    foreignKey: "idPets",
+    foreignKey: "pet_id",
 });
 
 module.exports = {

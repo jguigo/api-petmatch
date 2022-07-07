@@ -9,17 +9,11 @@ module.exports = {
                 autoIncrement: true,
                 primaryKey: true,
             },
-            idUser: {
+            statusAdocao: {
                 type: Sequelize.INTEGER,
-                allowNull: false,
-                references: {
-                    model: {
-                        tableName: "users",
-                    },
-                    key: "id",
-                },
+                defaultValue: 2,
             },
-            idPet: {
+            pet_id: {
                 type: Sequelize.INTEGER,
                 allowNull: false,
                 references: {
@@ -29,9 +23,25 @@ module.exports = {
                     key: "id",
                 },
             },
-            statusAdocao: {
+            ownerPet_id: {
                 type: Sequelize.INTEGER,
-                defaultValue: 1,
+                allowNull: false,
+                references: {
+                    model: {
+                        tableName: "users",
+                    },
+                    key: "id",
+                },
+            },
+            adoptionUser_id: {
+                type: Sequelize.INTEGER,
+                allowNull: false,
+                references: {
+                    model: {
+                        tableName: "users",
+                    },
+                    key: "id",
+                },
             },
             createdAt: {
                 type: Sequelize.DATE,
