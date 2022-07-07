@@ -14,10 +14,10 @@ for (let i = 0; i < 10; i++) {
 
 module.exports = {
     async up(queryInterface, Sequelize) {
-        await queryInterface.bulkInsert("adocao", seed);
+        await queryInterface.bulkInsert("adocoes", seed);
     },
 
     async down(queryInterface, Sequelize) {
-        return queryInterface.bulkDelete("adocao", null, {});
+        return queryInterface.bulkDelete("adocoes", null, {});
     },
 };

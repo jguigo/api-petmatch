@@ -1,7 +1,7 @@
 const db = require("../index");
 const { DataTypes } = require("sequelize");
 
-const Adoption = db.define("pets", {
+const Adoption = db.define("adocoes", {
     id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
@@ -19,6 +19,7 @@ const Adoption = db.define("pets", {
     statusAdocao: {
         type: DataTypes.INTEGER,
         allowNull: false,
+        defaultValue: 1,
     },
     createdAt: {
         type: DataTypes.DATE,
