@@ -3,7 +3,7 @@ const STATUS = require("../../../shared/utils/status");
 
 class CreateAdoptionUseCase {
     async create(data) {
-        const { id: petId } = data.params;
+        const { petId } = data.params;
         const objAdoption = {};
 
         const petInfo = await petRepository.findOne(petId);
