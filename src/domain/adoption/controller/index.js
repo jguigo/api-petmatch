@@ -1,14 +1,18 @@
 const CreateAdoptionController = require("./CreateAdoptionController");
 const ChooseAdoptionController = require("./ChooseAdoptionController");
-const FindOneAdoptionController = require("./FindOneAdoptionController");
 const AcceptAdoptionApplyController = require("./AcceptAdoptionApplyController");
 const RejectAdoptionApplyController = require("./RejectAdoptionApplyController");
+const FindOneAdoptionController = require("./FindOneAdoptionController");
+const FindAllAdoptionByOwnerController = require("./FindAllAdoptionByOwnerController");
+const FindAllAdoptionByUserController = require("./FindAllAdoptionByUserController");
 
 const createAdoptionController = new CreateAdoptionController();
 const chooseAdoptionController = new ChooseAdoptionController();
 const findOneAdoptionController = new FindOneAdoptionController();
 const acceptAdoptionApplyController = new AcceptAdoptionApplyController();
 const rejectAdoptionApplyController = new RejectAdoptionApplyController();
+const findAllAdoptionByOwnerController = new FindAllAdoptionByOwnerController();
+const findAllAdoptionByUserController = new FindAllAdoptionByUserController();
 
 module.exports = {
     createAdoptionController,
@@ -16,4 +20,6 @@ module.exports = {
     findOneAdoptionController,
     acceptAdoptionApplyController,
     rejectAdoptionApplyController,
+    findAllAdoptionByOwnerController,
+    findAllAdoptionByUserController,
 };
