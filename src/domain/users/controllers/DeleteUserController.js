@@ -9,7 +9,9 @@ class DeleteUserController {
                 return res.status(400).json(result.message);
             }
 
-            return res.status(200).json(result);
+            return res
+                .status(204)
+                .json({ message: "usuário deletado com sucesso" });
         } catch (error) {
             return res.status(500).json(`INTERNAL ERROR: ${error}`);
         }
