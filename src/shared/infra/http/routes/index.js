@@ -4,7 +4,6 @@ const petsRoutes = require("./petsRoutes");
 const adoptionRoutes = require("./adoptionRoutes");
 const { authController } = require("../../../../domain/auth/controller/index");
 const loginValidation = require("../../../../domain/auth/validation/index");
-const validation = require("../../../../domain/pets/validation/index");
 
 const routes = express.Router();
 
