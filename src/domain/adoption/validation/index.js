@@ -1,13 +1,9 @@
 const create = require("./create");
-const findOne = require("./findOne");
-const update = require("./update");
-const destroy = require("./delete");
+const acceptAndReject = require("./acceptAndReject");
 
-const petsValidation = {
+const adoptionValidation = {
     create,
-    findOne,
-    update,
-    destroy,
+    acceptAndReject,
 };
 
-module.exports = petsValidation;
+module.exports = adoptionValidation;
