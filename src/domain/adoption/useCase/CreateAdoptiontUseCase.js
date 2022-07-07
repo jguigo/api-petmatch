@@ -7,8 +7,8 @@ class CreateAdoptionUseCase {
         const objAdoption = {};
 
         const petInfo = await petRepository.findOne(id);
-        console.log(petInfo.dataValues.petStatus);
-        if (petInfo.dataValues.petStatus != 1) {
+
+        if (!petInfo) {
             return new Error("Pet indisponível para adoção!");
         }
 
