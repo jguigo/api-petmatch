@@ -9,6 +9,7 @@ const {
     acceptAdoptionApplyController,
     rejectAdoptionApplyController,
 } = require("../../../../domain/adoption/controller");
+const adoptionValidation = require("../../../../domain/adoption/validation");
 
 routes.get(
     "/adoption/owner",
@@ -20,23 +21,23 @@ routes.get(
     auth,
     findAllAdoptionByUserController.findAllByUserId,
 );
-routes.post("/adoption/:id", auth, createAdoptionController.create);
+routes.post(
+    "/adoption/:petId",
+    auth,
+    adoptionValidation.create,
+    createAdoptionController.create,
+);
 routes.post(
     "/adoption/:adoptionId/accept",
     auth,
+    adoptionValidation.acceptAndReject,
     acceptAdoptionApplyController.accept,
 );
 routes.post(
     "/adoption/:adoptionId/reject",
     auth,
+    adoptionValidation.acceptAndReject,
     rejectAdoptionApplyController.reject,
 );
-
-// routes.put(
-//     "/adoption/:id",
-//     auth,
-//     // validationUser.update,
-//     chooseAdoptionController.update,
-// );
 
 module.exports = routes;
