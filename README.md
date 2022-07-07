@@ -55,21 +55,21 @@ As seguintes ferramentas foram utilizadas na construção do projeto:
 <p>Esse projeto só foi possível graças a contribuição de todos os envolvidos, a orientação dos professores da Gama Academy, a equipe de suporte da Gama e principalmente ao esforço colaborativo de toda a equipe ao longo de todo o projeto.<p\>
 
 🖌️ Product Design
-- [Giovanna Schneider]
-- [João Gabriel de Oliveira]
-- [Marcelo Tesla]
+- [Giovanna Schneider](https://www.linkedin.com/in/gioschneider/)
+- [João Gabriel de Oliveira](https://www.linkedin.com/in/oliveirajg/)
+- [Marcelo Tesla](https://www.linkedin.com/in/marcelo-tesla/)
 
 
 🖥️ Front-end
-- [André Sarmento]
-- [Felipe Barbosa]
-- [Thais Cavalcante]
-- [Victor Landim]
+- [André Lima](https://www.linkedin.com/in/andrelimadev/)
+- [Felipe Matheus](https://www.linkedin.com/in/felipe-matheus-26b147163/)
+- [Thais Cavalcante](https://www.linkedin.com/in/thaispcavalcante/)
+- [Victor Landim](https://www.linkedin.com/in/victor-landim-37b102169/)
 
 
 ⌨️ Back-end
-- [Eduardo Carreiro]
+- [Eduardo Carreiro](https://www.linkedin.com/in/carreiroe/)
 - [Frederic Rodrigues](https://www.linkedin.com/in/fredericlsr/)
-- [Guilherme Melo]
-- [Luis Vinicius Antonello]
-- [Ramon Queiroz]
+- [Guilherme Melo](https://www.linkedin.com/in/guilhermef-melo/)
+- [Vinicius Antonello](https://www.linkedin.com/in/viniciusantonello/)
+- [Ramon Queiroz](https://www.linkedin.com/in/ramon-qs/)
