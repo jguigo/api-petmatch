@@ -3,6 +3,7 @@ const {
     createPetController,
     findAllPetController,
     findOnePetController,
+    findPetByEspecieController,
     updatePetController,
     deletePetController,
 } = require("../../../../domain/pets/controller/index");
@@ -14,6 +15,11 @@ const routes = express.Router();
 
 routes.get("/pets", findAllPetController.findAll);
 routes.get("/pets/:id", validation.findOne, findOnePetController.findOne);
+routes.get(
+    "/pets/especie/:especie",
+    validation.findByEspecie,
+    findPetByEspecieController.findByEspecie,
+);
 routes.post(
     "/pets",
     auth,
