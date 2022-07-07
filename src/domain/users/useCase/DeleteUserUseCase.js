@@ -3,7 +3,7 @@ const { userRepository } = require("../../repository/index");
 class DeleteUserUseCase {
     async findOne(data) {
         const userId = data.params.id;
-        const authId = data.auth;
+        const authId = data.auth.id;
 
         const userDel = await userRepository.findOne(userId);
 
@@ -11,7 +11,7 @@ class DeleteUserUseCase {
             return new Error("Nenhum usuario cadastrado com este ID!");
         }
 
-        if (!userId != authId) {
+        if (!userId == authId) {
             return new Error("Você não pode realizar essa ação!");
         }
 
