@@ -14,15 +14,15 @@ const Adoption = db.define("adocoes", {
         defaultValue: 2,
     },
     pet_id: {
-        type: DataTypes.STRING,
+        type: DataTypes.INTEGER,
         allowNull: false,
     },
     ownerPet_id: {
-        type: DataTypes.STRING,
+        type: DataTypes.INTEGER,
         allowNull: false,
     },
     adoptionUser_id: {
-        type: DataTypes.STRING,
+        type: DataTypes.INTEGER,
         allowNull: false,
     },
     createdAt: {
