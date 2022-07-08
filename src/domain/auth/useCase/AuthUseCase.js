@@ -18,7 +18,7 @@ class AuthUseCase {
 
         const userInfos = {
             id: user.id,
-            userStatus: user.userStatus == 1 ? true : false,
+            userStatus: true,
             permissao: user.permissao == 0 ? "user" : "admin",
         };
 
