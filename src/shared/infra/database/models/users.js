@@ -12,6 +12,10 @@ const Users = db.define("users", {
         type: DataTypes.STRING,
         allowNull: false,
     },
+    sobrenome: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
     email: {
         type: DataTypes.STRING,
         allowNull: false,
@@ -64,7 +68,7 @@ const Users = db.define("users", {
     permissao: {
         type: DataTypes.INTEGER,
         allowNull: false,
-        defaultValue: 1,
+        defaultValue: 0,
     },
     userStatus: {
         type: DataTypes.INTEGER,

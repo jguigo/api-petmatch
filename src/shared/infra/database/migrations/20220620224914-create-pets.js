@@ -54,12 +54,12 @@ module.exports = {
 				allowNull: false
 			},
 			chip: {
-				type: Sequelize.INTEGER,
+				type: Sequelize.STRING,
 				allowNull: true
 			},
 			sobre: {
 				type: Sequelize.STRING,
-				allowNull: true
+				allowNull: false
 			},
 			petImage: {
 				type: Sequelize.STRING,

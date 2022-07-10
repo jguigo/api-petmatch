@@ -1,15 +1,41 @@
 const Users = require("./users");
 const Pets = require("./pets");
+const Adoption = require("./adoption");
 
 Users.hasMany(Pets, {
-	foreignKey: "userID"
+    foreignKey: "userID",
 });
 
 Pets.belongsTo(Users, {
-	foreignKey: "userID"
+    foreignKey: "userID",
+});
+
+Users.hasMany(Adoption, {
+    foreignKey: "adoptionUser_id",
+});
+
+Adoption.belongsTo(Users, {
+    foreignKey: "adoptionUser_id",
+});
+
+Users.hasMany(Adoption, {
+    foreignKey: "ownerPet_id",
+});
+
+Adoption.belongsTo(Users, {
+    foreignKey: "ownerPet_id",
+});
+
+Pets.hasMany(Adoption, {
+    foreignKey: "pet_id",
+});
+
+Adoption.belongsTo(Pets, {
+    foreignKey: "pet_id",
 });
 
 module.exports = {
-	Users,
-	Pets
+    Users,
+    Pets,
+    Adoption,
 };

@@ -1,10 +1,11 @@
 const { Users } = require("../../shared/infra/database/models/index");
+const STATUS = require("../../shared/utils/status");
 
 class UserRepository {
     async findAll() {
         return await Users.findAll({
             where: {
-                userStatus: 1,
+                userStatus: STATUS.Active,
             },
             attributes: {
                 exclude: ["userStatus"],
@@ -14,7 +15,7 @@ class UserRepository {
     async findOne(userId) {
         return await Users.findOne({
             where: {
-                userStatus: 1,
+                userStatus: STATUS.Active,
                 id: userId,
             },
         });
@@ -22,7 +23,7 @@ class UserRepository {
 
     async findByEmail(userEmail) {
         return await Users.findOne({
-            where: { userStatus: 1, email: userEmail },
+            where: { userStatus: STATUS.Active, email: userEmail },
             attributes: {
                 exclude: ["userStatus"],
             },
@@ -41,7 +42,7 @@ class UserRepository {
         return await Users.update(objUser, { where: { id: userId } });
     }
     async destroy(userId) {
-        return await Users.update({ userStatus: 0 }, { where: { id: userId } });
+        return await Users.update({ userStatus: STATUS.Deleted }, { where: { id: userId } });
     }
 }
 
