@@ -7,7 +7,7 @@ class UpdateUserController {
             if (response instanceof Error) {
                 return res.status(400).json(response.message);
             }
-            return res.status(202).json(response);
+            return res.status(200).json(response);
         } catch (error) {
             return res
                 .status(500)
