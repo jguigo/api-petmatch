@@ -44,11 +44,14 @@ As seguintes ferramentas foram utilizadas na construção do projeto:
 
 ## 📚Documentação
 
-[Documentação Figma](https://www.figma.com/file/qh3S9lIgdm3cto3YGC2X3q/PetMatch---Desafio-Chef%C3%A3o?node-id=2%3A3)</br>
-[Protótipo Figma](https://www.figma.com/proto/qh3S9lIgdm3cto3YGC2X3q/PetMatch---Desafio-Chef%C3%A3o?node-id=298%3A1375&scaling=min-zoom&page-id=2%3A3&starting-point-node-id=298%3A1375)</br>
-[Repositório Back-end](https://github.com/jguigo/api-petmatch)</br>
-[Repositório Front-end](https://github.com/andresdslima/petmatch-front) </br>
-[Documentação API](https://documenter.getpostman.com/view/21580588/UzJLMw53)</br>
+- [Kanban](https://trello.com/b/I6xFzVo8/desafio-chef%C3%A3o-projeto-ado%C3%A7%C3%A3o)</br>
+- [Notion](https://rune-shame-8aa.notion.site/Desafio-Chef-o-Final-Pet-Match-9f0577cf8b8f43548febcfa894894f9d)</br>
+- [Layout](https://www.figma.com/file/qh3S9lIgdm3cto3YGC2X3q/PetMatch---Desafio-Chef%C3%A3o?node-id=2%3A3)</br>
+- [Deploy](https://thepetmatch.vercel.app)</br>
+- [Repositório Front-end](https://github.com/andresdslima/petmatch-front) </br>
+- [Repositório Back-end](https://github.com/jguigo/api-petmatch)</br>
+- [API PetMatch](https://api-petmatch.herokuapp.com/pets)</br>
+- [Documentação API](https://documenter.getpostman.com/view/21580588/UzJLMw53)</br>
 
 ## 🤝 Equipe
 
