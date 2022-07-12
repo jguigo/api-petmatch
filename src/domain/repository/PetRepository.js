@@ -1,16 +1,24 @@
-const { Pets } = require("../../shared/infra/database/models/index");
+const { Pets, Users } = require("../../shared/infra/database/models/index");
 const STATUS = require("../../shared/utils/status");
 
 class PetRepository {
     async findAll(where = {}) {
         return await Pets.findAll({
             where: { ...where, petStatus: STATUS.Active },
+            include: {
+                model: Users,
+                attributes: { exclude: ["senha", "permissao", "userStatus"] },
+            },
         });
     }
 
     async findOne(petId) {
         return await Pets.findOne({
             where: { id: petId, petStatus: STATUS.Active },
+            include: {
+                model: Users,
+                attributes: { exclude: ["senha", "permissao", "userStatus"] },
+            },
         });
     }
 
