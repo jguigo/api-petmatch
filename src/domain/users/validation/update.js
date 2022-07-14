@@ -15,7 +15,7 @@ module.exports = validate({
         cep: Joi.string().length(8),
         logradouro: Joi.string(),
         numero_logradouro: Joi.string(),
-        complemento: Joi.string(),
+        complemento: Joi.string().allow(null),
         bairro: Joi.string(),
         cidade: Joi.string(),
         uf: Joi.string().length(2),
